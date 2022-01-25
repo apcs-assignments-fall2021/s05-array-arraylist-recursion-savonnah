@@ -51,8 +51,14 @@ public class MyMain {
 
     // Tail Recursive Method:
     public static int sumTR(int[] arr, int i, int sum) {
-        // YOUR CODE HERE
-        return -1;
+        if (i == arr.length) {
+            return sum;
+        }
+        // Recursive call
+        else {
+            return sumTR(arr, i + 1, sum+=arr[i]);
+        }
+
     }
 
 
@@ -69,14 +75,20 @@ public class MyMain {
 
     // Wrapper Method (Provided for you):
     public static boolean search(ArrayList<Integer> list, int x) {
-        // YOUR CODE HERE
-        return false;
+        return searchTR(list,x, 0);
     }
 
     // Tail Recursive Method:
     public static boolean searchTR(ArrayList<Integer> list, int x, int i) {
-        // YOUR CODE HERE
-        return false;
+        if (i == list.size()){
+            return false;
+        }
+        if (list.get(i) == x){
+            return true;
+        }
+        else{
+            return searchTR(list,x,i+1);
+        }
     }
 
 
@@ -89,9 +101,21 @@ public class MyMain {
 
     // Wrapper Method (Provided for you):
     public static boolean allEven(int[] arr) {
-        // YOUR CODE HERE
-        return false;
+        return allEvenTR(arr, 0);
     }
+
+    public static boolean allEvenTR(int[] arr, int i) {
+        if (i == arr.length){
+            return true;
+        }
+        if (arr[i] % 2 == 0){
+            return allEvenTR(arr, i+1);
+        }
+        else{
+            return false;
+        }
+    }
+
 
     // Tail Recursive Method:
     // You should write this yourself!
@@ -136,9 +160,32 @@ public class MyMain {
 
     // Wrapper method
     public static boolean hasCountCopies(int[] arr, int x, int count) {
-        // YOUR CODE HERE
-        return false;
+        return hasCountCopiesTR(arr, 0, x, count, 0);
     }
+
+    public static boolean hasCountCopiesTR(int[] arr, int i, int x, int count, int y) {
+        if (i == arr.length){
+            if (y == count){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        if (x == arr[i]){
+//            if (i == count){
+//                return true;
+//            }
+            // dont return true here unless run through whole array
+//            else{
+                return hasCountCopiesTR(arr, i+1, x, count, y+1);
+//            }
+        }
+        else{
+            return hasCountCopiesTR(arr, i+1, x, count, y);
+        }
+    }
+
 
     // You may want a tail recursive method
 
