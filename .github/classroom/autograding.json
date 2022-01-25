@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "testSum",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testSum",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "testSearch",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testSearch",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "testAllEven",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testAllEven",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "testHasCountCopies",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testHasCountCopies",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "testIsSorted",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testIsSorted",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "testEscape",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testEscape",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
